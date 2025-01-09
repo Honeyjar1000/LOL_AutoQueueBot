@@ -1,0 +1,11 @@
+top_champion_preference: "Riven"
+jungle_champion_preference: "Amumu"
+mid_champion_preference: "Annie"
+bot_champion_preference: "Miss Fortune"
+support_champion_preference: "Naut"
+
+top_second_champion_preference: "Garen"
+jungle_second_champion_preference: "Nocturn"
+mid_second_champion_preference: "Xerath"
+bot_second_champion_preference: "Cait"
+support_second_champion_preference: "Leona"
