@@ -1,4 +1,9 @@
 # Automatic Queue Bot for League of Legends
+
+<p align="center">
+  <img src="imgs/intro.png" alt="alt text">
+</p>
+
  Script to automatically except queue pops, and lock in champions all while afk.
  Simply enter a lobby, search for a match, and leave your computer while the bot locks in your selected champion and runes.
 
@@ -69,6 +74,7 @@ python main.py
 
 - The program can be quit at any time by holding Q or ESC. That's it!
 - The program will lock in your selected champions (picking a random champion if impossible) while you AFK!
+- A window will pop up of your main screen, note that the league client must be one this screen for the program to work.
 
 ## To Come
 
