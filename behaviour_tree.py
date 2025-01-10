@@ -145,9 +145,9 @@ class bt:
         cv2.imshow('Screen with Template Highlight', screenshot_resized)
 
         key = cv2.waitKey(1)
-        if key == ord('q') or key == 27:  # ASCII for 'q' or Esc key
-            return True  # Signal to stop the program
-        return False
+        #if key == ord('q') or key == 27:  # ASCII for 'q' or Esc key
+        #    return True  # Signal to stop the program
+        return
 
     def draw_bbox(self, screen, result, scale_factor):
         if result is None:
