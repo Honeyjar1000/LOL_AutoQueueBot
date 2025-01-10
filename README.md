@@ -7,7 +7,7 @@
  Script to automatically except queue pops, and lock in champions all while afk.
  Simply enter a lobby, search for a match, and leave your computer while the bot locks in your selected champion and runes.
 
- NOTE: This program uses computer vision and will only work if the client is window size 1600 x 900
+ NOTE: This program uses computer vision and will only work if the __client is window size 1600 x 900__
 
 <p align="center">
   <img src="imgs/window_size.png" alt="alt text" width="500" height="500">
