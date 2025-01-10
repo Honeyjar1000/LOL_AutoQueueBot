@@ -1,4 +1,4 @@
-from behaviour_tree import bt
+from scripts.behaviour_tree import bt
 import cv2 
 import keyboard
 

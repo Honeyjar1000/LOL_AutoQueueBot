@@ -4,7 +4,7 @@ from PIL import ImageGrab
 import os
 import numpy as np
 import time
-from load_config import get_champion_preference
+from scripts.load_config import get_champion_preference
 
 def match_template(template_path):
     # Load the template image of the copy icon

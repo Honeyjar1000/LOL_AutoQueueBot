@@ -4,7 +4,7 @@ from PIL import ImageGrab
 import os
 import numpy as np
 import time
-from utils import *
+from scripts.utils import *
 
 InQueue_TP = os.path.abspath('imgs/in_queue.png')
 AcceptMatch_TP = os.path.abspath('imgs/accept_match.png')
