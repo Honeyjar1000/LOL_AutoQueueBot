@@ -24,12 +24,18 @@ def match_template(template_path):
         return None
 
 def click_match(match):
-        time.sleep(0.5)
-        pyautogui.moveTo(match[0] + (match[2]//2), match[1] + (match[3]//2))
-        time.sleep(0.5)
-        pyautogui.click()
+    time.sleep(0.5)
+    pyautogui.moveTo(match[0] + (match[2]//2), match[1] + (match[3]//2))
+    time.sleep(0.5)
+    pyautogui.click()
 
 
+def click_match_close_smite(match):
+    time.sleep(0.5)
+    # Move to the top-right corner of the bounding box
+    pyautogui.moveTo(match[0] + match[2], match[1])
+    time.sleep(0.5)
+    pyautogui.click()
 
 
 def select_champion(role, search_match, attempts, search_result):
@@ -56,7 +62,6 @@ def select_runes(runes_result):
     left_rune_result = [runes_result[0] + 191, runes_result[1] -500, 90, 90]
     time.sleep(1)
     click_match(left_rune_result)
-
 
 def determine_role():
     player_role_position_path = os.path.abspath('imgs/player_select_position.png')
@@ -88,26 +93,4 @@ def determine_role():
                 min_ind = i
 
     return role_string_list[min_ind], role_list[min_ind], [top_role_result, jungle_role_result, mid_role_result, bot_role_result, support_role_result]
-
-def check_valid_champ_hover(role, result):
-    top_role_path = os.path.abspath('imgs/role_top.png')
-    jungle_role_path = os.path.abspath('imgs/role_jungle.png')
-    mid_role_path = os.path.abspath('imgs/role_mid.png')
-    bot_role_path = os.path.abspath('imgs/role_bot.png')
-    support_role_path = os.path.abspath('imgs/role_support.png')
-    top_role_result = match_template(top_role_path)
-    jungle_role_result = match_template(jungle_role_path)
-    mid_role_result = match_template(mid_role_path)
-    bot_role_result = match_template(bot_role_path)
-    support_role_result = match_template(support_role_path)
-    if role == 'top':
-        return top_role_result
-    elif role == 'jungle':
-        return jungle_role_result
-    elif role == 'mid':
-        return mid_role_result
-    elif role == 'bot':
-        return bot_role_result
-    elif role == 'support':
-        return support_role_result
 

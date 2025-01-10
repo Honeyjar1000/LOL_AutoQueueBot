@@ -51,8 +51,14 @@ class bt:
                 self.state = "In Champ Select"
                 total_results.append(StartChampSelect_RESULT)
 
+                SmiteCloseCase_Result = match_template(SmiteCloseCase_TP)
+                if SmiteCloseCase_Result:
+                    total_results.append(SmiteCloseCase_Result)
+                    click_match_close_smite(SmiteCloseCase_Result)
+                    time.sleep(0.5)
+                    
                 self.role, self.role_RESULT, AllRoles_result = determine_role()
-                print("all roles 1: ", AllRoles_result)
+
                 for r_result in AllRoles_result:
                     total_results.append(r_result)
 
@@ -64,17 +70,11 @@ class bt:
                     else:
                         print("Error: no search champ found?")
 
-            SmiteCloseCase_Result = match_template(SmiteCloseCase_TP)
-            if SmiteCloseCase_Result:
-                total_results.append(SmiteCloseCase_Result)
-                click_match(SmiteCloseCase_Result)
-                time.sleep(1)
+            
 
         # Select Champ and Lock In
         if InQueue_RESULT is None:
             
-            
-
             LockInValid_RESULT = match_template(LockInValid_TP)
             LockInNotValid_RESULT = match_template(LockInNotValid_TP)
             if (LockInValid_RESULT) or (LockInNotValid_RESULT):
@@ -106,6 +106,8 @@ class bt:
 
         print(f'State: {self.state} | Role: {self.role}')
         return total_results
+
+
 
     def display_screen(self, results_inputs):
         # Capture the screen (entire virtual screen)
